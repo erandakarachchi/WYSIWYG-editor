@@ -55,23 +55,43 @@ const WYSIWYGEditor = () => {
     executeCommand({ command: "insertOrderedList" });
   };
 
+  const undo = () => {
+    executeCommand({ command: "undo" });
+  };
+
+  const getCurrentSelection = () => {
+    const selection = window.getSelection();
+    console.log("Selection ", selection);
+  };
+
   return (
     <div className="container">
       <h1 className="header">WYSIWYG Editor</h1>
       <div className="toolbar">
-        <IconButton icon="fas fa-bold" onClick={bold} />
-        <IconButton icon="fas fa-italic" onClick={italic} />
-        <IconButton icon="fas fa-underline" onClick={underline} />
-        <IconButton icon="fas fa-strikethrough" onClick={strikethrough} />
-        <IconButton icon="fas fa-align-left" onClick={alignLeft} />
-        <IconButton icon="fas fa-align-right" onClick={alignRight} />
-        <IconButton icon="fas fa-align-center" onClick={alignCenter} />
-        <IconButton icon="fas fa-align-justify" onClick={justify} />
-        <IconButton icon="fas fa-list" onClick={unorderedList} />
-        <IconButton icon="fas fa-list-ol" onClick={orderedList} />
+        <div className="toolbar-primary-controllers">
+          <IconButton icon="fas fa-bold" onClick={bold} />
+          <IconButton icon="fas fa-italic" onClick={italic} />
+          <IconButton icon="fas fa-underline" onClick={underline} />
+          <IconButton icon="fas fa-strikethrough" onClick={strikethrough} />
+          <IconButton icon="fas fa-align-left" onClick={alignLeft} />
+          <IconButton icon="fas fa-align-right" onClick={alignRight} />
+          <IconButton icon="fas fa-align-center" onClick={alignCenter} />
+          <IconButton icon="fas fa-align-justify" onClick={justify} />
+          <IconButton icon="fas fa-list" onClick={unorderedList} />
+          <IconButton icon="fas fa-list-ol" onClick={orderedList} />
+        </div>
+        <div className="toolbar-secondary-controllers">
+          <IconButton icon="fas fa-undo" onClick={undo} />
+        </div>
       </div>
       <div className="editor-container">
-        <div ref={editorRef} className="editor" contentEditable></div>
+        <div
+          ref={editorRef}
+          className="editor"
+          contentEditable
+          onKeyUp={getCurrentSelection}
+          onMouseUp={getCurrentSelection}
+        ></div>
       </div>
     </div>
   );

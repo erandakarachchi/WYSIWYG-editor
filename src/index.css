@@ -36,10 +36,19 @@ body {
   max-width: 1280px;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: #536493;
   height: 50px;
+  padding: 0px 16px;
+}
+
+.toolbar-primary-controllers{
+  display: flex;
+  gap: 8px;
+}
+.toolbar-secondary-controllers{
+  display: flex;
   gap: 8px;
 }
 
