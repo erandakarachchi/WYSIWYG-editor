@@ -1,0 +1,53 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: aliceblue;
+}
+
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header{
+  padding: 10px;  
+}
+
+.toolbar{
+  max-width: 1280px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:darkgray;
+  height: 50px;
+}
+
+.editor{
+  width: 100%;
+  max-width: 1280px;
+  min-height: 600px;
+  height: 100%;
+  background-color: white;
+  border: none;
+  padding: 16px;
+  outline: none;
+}
+
+/* Add your additional CSS rules below */
