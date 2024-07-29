@@ -14,10 +14,10 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: aliceblue;
+  background-color: #021526;
 }
 
-.container{
+.container {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -25,29 +25,45 @@ body {
   align-items: center;
 }
 
-.header{
-  padding: 10px;  
+.header {
+  padding: 10px;
+  color: #fff;
+  font-size: 54px;
+  margin-bottom: 24px;
 }
 
-.toolbar{
+.toolbar {
   max-width: 1280px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color:darkgray;
+  background-color: #536493;
   height: 50px;
+  gap: 8px;
 }
 
-.editor{
-  width: 100%;
+.editor-container {
   max-width: 1280px;
   min-height: 600px;
-  height: 100%;
+  width: 100%;
   background-color: white;
+}
+
+.editor {
   border: none;
   padding: 16px;
   outline: none;
+  font-size: x-large;
+}
+
+.icon-button {
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
 }
 
 /* Add your additional CSS rules below */

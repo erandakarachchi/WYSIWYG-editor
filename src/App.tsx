@@ -1,4 +1,4 @@
-import WYSIWYGEditor from "./WYSIWYGEditor";
+import WYSIWYGEditor from "./components/WYSIWYGEditor";
 
 const App = () => {
   return (
